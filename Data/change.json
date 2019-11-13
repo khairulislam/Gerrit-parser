@@ -1,0 +1,572 @@
+[
+    {
+        "id": "openstack%2Fopenstack-virtual-baremetal~master~I666693dd2fb3517d53064c9b309c6760a5d79feb",
+        "project": "openstack/openstack-virtual-baremetal",
+        "branch": "master",
+        "topic": "oooq/ovb",
+        "hashtags": [],
+        "change_id": "I666693dd2fb3517d53064c9b309c6760a5d79feb",
+        "subject": "Fix ovb cloning location",
+        "status": "MERGED",
+        "created": "2019-01-16 11:54:24.000000000",
+        "updated": "2019-01-16 17:48:34.000000000",
+        "submitted": "2019-01-16 17:48:34.000000000",
+        "submittable": false,
+        "insertions": 3,
+        "deletions": 3,
+        "_number": 631200,
+        "owner": {
+            "_account_id": 24162
+        },
+        "labels": {
+            "Verified": {
+                "all": [
+                    {
+                        "value": 0,
+                        "_account_id": 6928
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 24162
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 10969
+                    },
+                    {
+                        "value": 2,
+                        "date": "2019-01-16 17:48:34.000000000",
+                        "_account_id": 22348
+                    }
+                ],
+                "values": {
+                    "-2": "Fails",
+                    "-1": "Doesn't seem to work",
+                    " 0": "No score",
+                    "+1": "Works for me",
+                    "+2": "Verified"
+                },
+                "default_value": 0
+            },
+            "Code-Review": {
+                "all": [
+                    {
+                        "value": 2,
+                        "date": "2019-01-16 17:30:59.000000000",
+                        "_account_id": 6928
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 24162
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 10969
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 22348
+                    }
+                ],
+                "values": {
+                    "-2": "Do not merge",
+                    "-1": "This patch needs further work before it can be merged",
+                    " 0": "No score",
+                    "+1": "Looks good to me, but someone else must approve",
+                    "+2": "Looks good to me (core reviewer)"
+                },
+                "default_value": 0
+            },
+            "Workflow": {
+                "all": [
+                    {
+                        "value": 1,
+                        "date": "2019-01-16 17:30:59.000000000",
+                        "_account_id": 6928
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 24162
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 10969
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 22348
+                    }
+                ],
+                "values": {
+                    "-1": "Work in progress",
+                    " 0": "Ready for reviews",
+                    "+1": "Approved"
+                },
+                "default_value": 0
+            }
+        },
+        "permitted_labels": {},
+        "removable_reviewers": [],
+        "reviewers": {
+            "CC": [
+                {
+                    "_account_id": 10969
+                },
+                {
+                    "_account_id": 24162
+                }
+            ],
+            "REVIEWER": [
+                {
+                    "_account_id": 6928
+                },
+                {
+                    "_account_id": 22348
+                }
+            ]
+        },
+        "messages": [
+            {
+                "id": "bfdaf3ff_f3e7a6e3",
+                "author": {
+                    "_account_id": 24162
+                },
+                "date": "2019-01-16 11:54:24.000000000",
+                "message": "Uploaded patch set 1.",
+                "_revision_number": 1
+            },
+            {
+                "id": "bfdaf3ff_f3356647",
+                "author": {
+                    "_account_id": 24162
+                },
+                "date": "2019-01-16 11:56:51.000000000",
+                "message": "Patch Set 1:\n\nThere is still one bugtracker_url in doc/source/conf.py which points to the old location of the project.\n\nI do not know exactly to where this should point? Because LP is still the most used, I propose to make it https://bugs.launchpad.net/tripleo/ \n\nHow about this?",
+                "_revision_number": 1
+            },
+            {
+                "id": "bfdaf3ff_337a0ef1",
+                "author": {
+                    "_account_id": 22348
+                },
+                "date": "2019-01-16 12:00:37.000000000",
+                "message": "Patch Set 1: Verified+1\n\nBuild succeeded (check pipeline).\n\n- openstack-tox-pep8 http://logs.openstack.org/00/631200/1/check/openstack-tox-pep8/e88fc7a/ : SUCCESS in 3m 53s\n- openstack-tox-py27 http://logs.openstack.org/00/631200/1/check/openstack-tox-py27/ed9308a/ : SUCCESS in 5m 40s",
+                "_revision_number": 1
+            },
+            {
+                "id": "bfdaf3ff_73fe5638",
+                "author": {
+                    "_account_id": 24162
+                },
+                "date": "2019-01-16 12:10:49.000000000",
+                "message": "Topic set to oooq/ovb",
+                "_revision_number": 1
+            },
+            {
+                "id": "bfdaf3ff_4e6e0896",
+                "author": {
+                    "_account_id": 6928
+                },
+                "date": "2019-01-16 15:17:10.000000000",
+                "message": "Patch Set 1:\n\n> There is still one bugtracker_url in doc/source/conf.py which\n > points to the old location of the project.\n > \n > I do not know exactly to where this should point? Because LP is\n > still the most used, I propose to make it https://bugs.launchpad.net/tripleo/\n\nAgreed. Let's use the tripleo LP.",
+                "_revision_number": 1
+            },
+            {
+                "id": "bfdaf3ff_3fcbac1e",
+                "author": {
+                    "_account_id": 24162
+                },
+                "date": "2019-01-16 17:28:14.000000000",
+                "message": "Uploaded patch set 2.",
+                "_revision_number": 2
+            },
+            {
+                "id": "bfdaf3ff_7f8e14d1",
+                "author": {
+                    "_account_id": 6928
+                },
+                "date": "2019-01-16 17:30:59.000000000",
+                "message": "Patch Set 2: Code-Review+2 Workflow+1",
+                "_revision_number": 2
+            },
+            {
+                "id": "bfdaf3ff_9a41863c",
+                "author": {
+                    "_account_id": 22348
+                },
+                "date": "2019-01-16 17:38:36.000000000",
+                "message": "Patch Set 2: Verified+1\n\nBuild succeeded (check pipeline).\n\n- openstack-tox-pep8 http://logs.openstack.org/00/631200/2/check/openstack-tox-pep8/af28873/ : SUCCESS in 4m 54s\n- openstack-tox-py27 http://logs.openstack.org/00/631200/2/check/openstack-tox-py27/87852ed/ : SUCCESS in 4m 16s",
+                "_revision_number": 2
+            },
+            {
+                "id": "bfdaf3ff_5a4b1e58",
+                "author": {
+                    "_account_id": 22348
+                },
+                "date": "2019-01-16 17:38:48.000000000",
+                "message": "Patch Set 2: -Verified\n\nStarting gate jobs.",
+                "_revision_number": 2
+            },
+            {
+                "id": "bfdaf3ff_5a6ebe95",
+                "author": {
+                    "_account_id": 22348
+                },
+                "date": "2019-01-16 17:48:34.000000000",
+                "message": "Patch Set 2: Verified+2\n\nBuild succeeded (gate pipeline).\n\n- openstack-tox-pep8 http://logs.openstack.org/00/631200/2/gate/openstack-tox-pep8/af0e4e4/ : SUCCESS in 3m 54s\n- openstack-tox-py27 http://logs.openstack.org/00/631200/2/gate/openstack-tox-py27/9070243/ : SUCCESS in 6m 00s",
+                "_revision_number": 2
+            },
+            {
+                "id": "bfdaf3ff_7a694289",
+                "author": {
+                    "_account_id": 22348
+                },
+                "date": "2019-01-16 17:48:34.000000000",
+                "message": "Change has been successfully merged by Zuul",
+                "_revision_number": 2
+            }
+        ],
+        "current_revision": "9a151e9b10acbc11b6827603870960ff7a0bc7e7",
+        "revisions": {
+            "05000b4bd7d43ad261f07b13b8c723c73a420d97": {
+                "kind": "REWORK",
+                "_number": 1,
+                "created": "2019-01-16 11:54:24.000000000",
+                "uploader": {
+                    "_account_id": 24162
+                },
+                "ref": "refs/changes/00/631200/1",
+                "fetch": {
+                    "git": {
+                        "url": "git://git.openstack.org/openstack/openstack-virtual-baremetal",
+                        "ref": "refs/changes/00/631200/1"
+                    },
+                    "anonymous http": {
+                        "url": "https://git.openstack.org/openstack/openstack-virtual-baremetal",
+                        "ref": "refs/changes/00/631200/1"
+                    }
+                },
+                "files": {
+                    "bin/ovb-instack": {
+                        "lines_inserted": 1,
+                        "lines_deleted": 1,
+                        "size_delta": 7,
+                        "size": 3640
+                    }
+                }
+            },
+            "9a151e9b10acbc11b6827603870960ff7a0bc7e7": {
+                "kind": "REWORK",
+                "_number": 2,
+                "created": "2019-01-16 17:28:14.000000000",
+                "uploader": {
+                    "_account_id": 24162
+                },
+                "ref": "refs/changes/00/631200/2",
+                "fetch": {
+                    "git": {
+                        "url": "git://git.openstack.org/openstack/openstack-virtual-baremetal",
+                        "ref": "refs/changes/00/631200/2"
+                    },
+                    "anonymous http": {
+                        "url": "https://git.openstack.org/openstack/openstack-virtual-baremetal",
+                        "ref": "refs/changes/00/631200/2"
+                    }
+                },
+                "files": {
+                    "bin/ovb-instack": {
+                        "lines_inserted": 1,
+                        "lines_deleted": 1,
+                        "size_delta": 7,
+                        "size": 3640
+                    },
+                    "doc/source/conf.py": {
+                        "lines_inserted": 2,
+                        "lines_deleted": 2,
+                        "size_delta": -18,
+                        "size": 3876
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": "openstack%2Fkolla~stable%2Frocky~I4a9f2fb2c9fdd21430ce3a9bd02999ae21e1847a",
+        "project": "openstack/kolla",
+        "branch": "stable/rocky",
+        "hashtags": [],
+        "change_id": "I4a9f2fb2c9fdd21430ce3a9bd02999ae21e1847a",
+        "subject": "base: tell gnupg to not use TTY when we import APT\u00a0keys",
+        "status": "MERGED",
+        "created": "2019-01-16 13:37:09.000000000",
+        "updated": "2019-01-16 17:48:21.000000000",
+        "submitted": "2019-01-16 17:48:21.000000000",
+        "submittable": false,
+        "insertions": 1,
+        "deletions": 1,
+        "_number": 631220,
+        "owner": {
+            "_account_id": 2276
+        },
+        "labels": {
+            "Verified": {
+                "all": [
+                    {
+                        "value": 0,
+                        "_account_id": 19316
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 24072
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 14826
+                    },
+                    {
+                        "value": 2,
+                        "date": "2019-01-16 17:48:21.000000000",
+                        "_account_id": 22348
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 13039
+                    }
+                ],
+                "values": {
+                    "-2": "Fails",
+                    "-1": "Doesn't seem to work",
+                    " 0": "No score",
+                    "+1": "Works for me",
+                    "+2": "Verified"
+                },
+                "default_value": 0
+            },
+            "Code-Review": {
+                "all": [
+                    {
+                        "value": 0,
+                        "_account_id": 19316
+                    },
+                    {
+                        "value": 2,
+                        "date": "2019-01-16 13:37:34.000000000",
+                        "_account_id": 24072
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 14826
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 22348
+                    },
+                    {
+                        "value": 2,
+                        "date": "2019-01-16 14:18:15.000000000",
+                        "_account_id": 13039
+                    }
+                ],
+                "values": {
+                    "-2": "Do not merge",
+                    "-1": "This patch needs further work before it can be merged",
+                    " 0": "No score",
+                    "+1": "Looks good to me, but someone else must approve",
+                    "+2": "Looks good to me (core reviewer)"
+                },
+                "default_value": 0
+            },
+            "Workflow": {
+                "all": [
+                    {
+                        "value": 0,
+                        "_account_id": 19316
+                    },
+                    {
+                        "value": 1,
+                        "date": "2019-01-16 16:39:42.000000000",
+                        "_account_id": 24072
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 14826
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 22348
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 13039
+                    }
+                ],
+                "values": {
+                    "-1": "Work in progress",
+                    " 0": "Ready for reviews",
+                    "+1": "Approved"
+                },
+                "default_value": 0
+            },
+            "Review-Priority": {
+                "all": [
+                    {
+                        "value": 0,
+                        "date": "2019-01-16 13:38:23.000000000",
+                        "_account_id": 19316
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 24072
+                    },
+                    {
+                        "value": 0,
+                        "date": "2019-01-16 13:38:10.000000000",
+                        "_account_id": 14826
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 22348
+                    },
+                    {
+                        "value": 0,
+                        "_account_id": 13039
+                    }
+                ],
+                "values": {
+                    "-1": "Branch Freeze",
+                    " 0": "No Priority",
+                    "+1": "Important Change",
+                    "+2": "Gate Blocker Fix / Urgent Change"
+                },
+                "default_value": 0
+            }
+        },
+        "permitted_labels": {},
+        "removable_reviewers": [],
+        "reviewers": {
+            "CC": [
+                {
+                    "_account_id": 14826
+                },
+                {
+                    "_account_id": 19316
+                }
+            ],
+            "REVIEWER": [
+                {
+                    "_account_id": 13039
+                },
+                {
+                    "_account_id": 22348
+                },
+                {
+                    "_account_id": 24072
+                }
+            ]
+        },
+        "messages": [
+            {
+                "id": "bfdaf3ff_39618faa",
+                "author": {
+                    "_account_id": 2276
+                },
+                "date": "2019-01-16 13:37:09.000000000",
+                "message": "Patch Set 1: Cherry Picked from branch master.",
+                "_revision_number": 1
+            },
+            {
+                "id": "bfdaf3ff_195e0be6",
+                "author": {
+                    "_account_id": 24072
+                },
+                "date": "2019-01-16 13:37:34.000000000",
+                "message": "Patch Set 1: Code-Review+2",
+                "_revision_number": 1
+            },
+            {
+                "id": "bfdaf3ff_394d0f9a",
+                "author": {
+                    "_account_id": 13039
+                },
+                "date": "2019-01-16 14:18:15.000000000",
+                "message": "Patch Set 1: Code-Review+2",
+                "_revision_number": 1
+            },
+            {
+                "id": "bfdaf3ff_2e938451",
+                "author": {
+                    "_account_id": 22348
+                },
+                "date": "2019-01-16 15:25:58.000000000",
+                "message": "Patch Set 1: Verified+1\n\nBuild succeeded (check pipeline).\n\n- kolla-build-centos-binary http://logs.openstack.org/20/631220/1/check/kolla-build-centos-binary/f5f729c/ : SUCCESS in 55m 14s (non-voting)\n- kolla-build-centos-source http://logs.openstack.org/20/631220/1/check/kolla-build-centos-source/eeee7fc/ : SUCCESS in 56m 37s\n- kolla-ansible-centos-source http://logs.openstack.org/20/631220/1/check/kolla-ansible-centos-source/a351d2c/ : SUCCESS in 1h 45m 36s\n- kolla-ansible-centos-binary http://logs.openstack.org/20/631220/1/check/kolla-ansible-centos-binary/300a970/ : SUCCESS in 1h 11m 53s (non-voting)\n- kolla-build-oraclelinux-binary http://logs.openstack.org/20/631220/1/check/kolla-build-oraclelinux-binary/2dbb72b/ : SUCCESS in 1h 14m 10s (non-voting)\n- kolla-build-oraclelinux-source http://logs.openstack.org/20/631220/1/check/kolla-build-oraclelinux-source/1c57349/ : SUCCESS in 1h 08m 02s\n- kolla-ansible-oraclelinux-source http://logs.openstack.org/20/631220/1/check/kolla-ansible-oraclelinux-source/d418165/ : SUCCESS in 1h 41m 41s (non-voting)\n- kolla-ansible-oraclelinux-binary http://logs.openstack.org/20/631220/1/check/kolla-ansible-oraclelinux-binary/4b2bdc7/ : SUCCESS in 1h 04m 08s (non-voting)\n- openstack-tox-lower-constraints http://logs.openstack.org/20/631220/1/check/openstack-tox-lower-constraints/0ea2268/ : SUCCESS in 3m 44s\n- openstack-tox-pep8 http://logs.openstack.org/20/631220/1/check/openstack-tox-pep8/e7109c0/ : SUCCESS in 5m 08s\n- openstack-tox-py27 http://logs.openstack.org/20/631220/1/check/openstack-tox-py27/1169692/ : SUCCESS in 3m 26s\n- openstack-tox-py35 http://logs.openstack.org/20/631220/1/check/openstack-tox-py35/6e108e0/ : SUCCESS in 3m 05s\n- build-openstack-sphinx-docs http://logs.openstack.org/20/631220/1/check/build-openstack-sphinx-docs/13d980a/html/ : SUCCESS in 4m 58s\n- kolla-build-ubuntu-binary http://logs.openstack.org/20/631220/1/check/kolla-build-ubuntu-binary/7aae33b/ : SUCCESS in 1h 08m 44s (non-voting)\n- kolla-build-ubuntu-source http://logs.openstack.org/20/631220/1/check/kolla-build-ubuntu-source/18c0072/ : SUCCESS in 42m 38s\n- kolla-ansible-ubuntu-source http://logs.openstack.org/20/631220/1/check/kolla-ansible-ubuntu-source/9aa95a0/ : SUCCESS in 51m 19s\n- kolla-ansible-ubuntu-binary http://logs.openstack.org/20/631220/1/check/kolla-ansible-ubuntu-binary/71bbda6/ : SUCCESS in 1h 28m 33s (non-voting)",
+                "_revision_number": 1
+            },
+            {
+                "id": "bfdaf3ff_84cccf6a",
+                "author": {
+                    "_account_id": 24072
+                },
+                "date": "2019-01-16 16:39:42.000000000",
+                "message": "Patch Set 1: Workflow+1",
+                "_revision_number": 1
+            },
+            {
+                "id": "bfdaf3ff_64c1ab2e",
+                "author": {
+                    "_account_id": 22348
+                },
+                "date": "2019-01-16 16:39:55.000000000",
+                "message": "Patch Set 1: -Verified\n\nStarting gate jobs.",
+                "_revision_number": 1
+            },
+            {
+                "id": "bfdaf3ff_9a74266a",
+                "author": {
+                    "_account_id": 22348
+                },
+                "date": "2019-01-16 17:48:21.000000000",
+                "message": "Patch Set 1: Verified+2\n\nBuild succeeded (gate pipeline).\n\n- kolla-build-centos-source http://logs.openstack.org/20/631220/1/gate/kolla-build-centos-source/c68f1dc/ : SUCCESS in 58m 36s\n- kolla-build-oraclelinux-source http://logs.openstack.org/20/631220/1/gate/kolla-build-oraclelinux-source/852e8b5/ : SUCCESS in 1h 03m 03s\n- openstack-tox-lower-constraints http://logs.openstack.org/20/631220/1/gate/openstack-tox-lower-constraints/b44444b/ : SUCCESS in 3m 57s\n- openstack-tox-pep8 http://logs.openstack.org/20/631220/1/gate/openstack-tox-pep8/b740393/ : SUCCESS in 4m 31s\n- openstack-tox-py27 http://logs.openstack.org/20/631220/1/gate/openstack-tox-py27/754a015/ : SUCCESS in 3m 31s\n- openstack-tox-py35 http://logs.openstack.org/20/631220/1/gate/openstack-tox-py35/9a0a68a/ : SUCCESS in 3m 09s\n- build-openstack-sphinx-docs http://logs.openstack.org/20/631220/1/gate/build-openstack-sphinx-docs/aabcc18/html/ : SUCCESS in 3m 43s\n- kolla-build-ubuntu-source http://logs.openstack.org/20/631220/1/gate/kolla-build-ubuntu-source/0fe9b92/ : SUCCESS in 31m 20s",
+                "_revision_number": 1
+            },
+            {
+                "id": "bfdaf3ff_ba6faa90",
+                "author": {
+                    "_account_id": 22348
+                },
+                "date": "2019-01-16 17:48:21.000000000",
+                "message": "Change has been successfully merged by Zuul",
+                "_revision_number": 1
+            }
+        ],
+        "current_revision": "53ea11205f100d59130f75697cd55f70b1276911",
+        "revisions": {
+            "53ea11205f100d59130f75697cd55f70b1276911": {
+                "kind": "REWORK",
+                "_number": 1,
+                "created": "2019-01-16 13:37:09.000000000",
+                "uploader": {
+                    "_account_id": 2276
+                },
+                "ref": "refs/changes/20/631220/1",
+                "fetch": {
+                    "git": {
+                        "url": "git://git.openstack.org/openstack/kolla",
+                        "ref": "refs/changes/20/631220/1"
+                    },
+                    "anonymous http": {
+                        "url": "https://git.openstack.org/openstack/kolla",
+                        "ref": "refs/changes/20/631220/1"
+                    }
+                },
+                "files": {
+                    "docker/base/Dockerfile.j2": {
+                        "lines_inserted": 1,
+                        "lines_deleted": 1,
+                        "size_delta": 9,
+                        "size": 16408
+                    }
+                }
+            }
+        }
+    }
+]
