@@ -17,9 +17,6 @@ class File:
     size = 0
 
     def __init__(self, name, data):
-        if type(data) != 0:
-            print("Invalid value")
-            exit(-1)
         self.file_name = name
 
         if "lines_deleted" in data.keys():

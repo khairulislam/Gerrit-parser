@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="984a75a3-210b-4069-9682-737a822dcf97" name="Default Changelist" comment="" />
+    <list default="true" id="984a75a3-210b-4069-9682-737a822dcf97" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Objects/File.py" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/File.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +17,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TWW4E8OgcpxwlObb0XQmDx6PSI" />
   <component name="PropertiesComponent">
@@ -79,5 +85,16 @@
       <updated>1573576138676</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
