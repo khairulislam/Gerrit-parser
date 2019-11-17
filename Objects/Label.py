@@ -1,5 +1,5 @@
-from datetime import datetime
-import re
+from Objects.Parser import Parser
+
 """
 "Verified": {
     "all": [
@@ -21,16 +21,23 @@ import re
 """
 
 
-class Label:
-    kind = ''
-    value = ''
-    date = ''
-    account_id = ''
+class Label(Parser):
+    different = {'account_id': '_account_id'}
+    same = ['date']
+    dates = ['date']
 
     def __init__(self, kind, data):
+        super().__init__(data)
         self.kind = kind
-        if "value" in data.keys():
-            self.value = data["value"]
-        if "date" in data.keys():
-            self.date = datetime.fromisoformat(re.sub(r"\.[0-9]+", "", data['date']))
-        self.account_id = data["_account_id"]
+
+    def parse(self):
+        result = super().parse()
+        result['date'] = self.fix_date(result['date'])
+        result['kind'] = self.kind
+        result['value'] = self.value()
+        return result
+
+    def value(self):
+        if 'value' in self.data.keys():
+            return self.data['value']
+        return 0

@@ -1,6 +1,4 @@
-import re
-from datetime import datetime
-
+from Objects.Parser import Parser
 """
 {
     "registered_on": "2015-12-16 17:50:21.000000000",
@@ -13,11 +11,7 @@ from datetime import datetime
 """
 
 
-class Profile:
-    account_id = ''
-    registered_on = ''
-
-    def __init__(self, data):
-        self.account_id = data["_account_id"]
-        date = re.sub(r"\.[0-9]+", "", data["registered_on"])
-        self.registered_on = datetime.fromisoformat(date)
+class Profile(Parser):
+    different = {'account_id': '_account_id'}
+    same = ['registered_on']
+    dates = ['registered_on']

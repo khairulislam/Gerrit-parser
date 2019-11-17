@@ -1,3 +1,5 @@
+from Objects.Parser import Parser
+
 """
 "bin/ovb-instack": {
     "lines_inserted": 1,
@@ -8,22 +10,15 @@
 """
 
 
-class File:
-    file_name = ''
-    status = ''
-    lines_inserted = 0
-    lines_deleted = 0
-    size_delta = 0
-    size = 0
+class File(Parser):
+    same = ['lines_deleted', 'lines_inserted', 'size', 'size_delta', 'status']
 
-    def __init__(self, name, data):
-        self.file_name = name
+    def __init__(self, data, name):
+        super().__init__(data)
+        self.name = name
 
-        if "lines_deleted" in data.keys():
-            self.lines_deleted = data['lines_deleted']
-        if "lines_inserted" in data.keys():
-            self.lines_inserted = data['lines_inserted']
-        self.size = data['size']
-        self.size_delta = data['size_delta']
-        if 'status' in data.keys():
-            self.status = data['status']
+    def parse(self):
+        result = super().parse()
+        result['name'] = self.name
+        return result
+

@@ -1,5 +1,4 @@
-from datetime import datetime
-import re
+from Objects.Parser import Parser
 
 """
 {
@@ -14,25 +13,18 @@ import re
 """
 
 
-class Message:
-    id = ''
-    author_id = ''
-    date = ''
-    message = ''
-    revision_no = 0
+class Message(Parser):
+    different = {'revision_number': '_revision_number'}
+    same = ['date', 'message']
+    dates = ['date']
 
-    def __init__(self, data):
-        # message.message = msg['message'].replace('\'', '')
-        self.id = data['id']
-        self.message = data['message']
-
-        if '_revision_number' in data.keys():
-            self.revision_no = data['_revision_number']
-
-        if 'date' in data.keys():
-            self.date = datetime.fromisoformat(re.sub(r"\.[0-9]+", "", data['date']))
+    def parse(self):
+        result = super().parse()
+        data = self.data
+        result['date'] = self.fix_date(result['date'])
 
         if 'real_author' in data.keys():
-            self.author_id = data['real_author']['_account_id']
+            result['author'] = data['real_author']['_account_id']
         elif 'author' in data.keys():
-            self.author_id = data['author']['_account_id']
+            result['author'] = data['author']['_account_id']
+        return result

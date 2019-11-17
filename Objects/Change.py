@@ -2,63 +2,59 @@ from datetime import datetime
 from Objects.Label import Label
 from Objects.Message import Message
 from Objects.Revision import Revision
+from Objects.Parser import Parser
 import re
 
 
-class Change:
-    change_number = ''
-    author_id = ''
-    subject = ''
+class Change(Parser):
+    # self.created = datetime.fromisoformat(re.sub(r"\.[0-9]+", "", data['created']))
+    different = {
+        'number': '_number',
+        'owner': 'owner/_account_id',
+    }
+    same = ['project', 'status', 'subject', 'created', 'updated']
+    dates = ['created', 'updated']
 
-    topic = ''
-    created = ''
-    deletions = 0
+    def parse(self):
+        data = self.data
+        # this handles nested and same
+        result = super().parse()
+        
+        result['created'] = self.fix_date(result['created'])
+        result['updated'] = self.fix_date(result['updated'])
 
-    insertions = 0
-    updated = ''
-    project = ''
+        # following are for object type values ['revisions', 'reviewers', 'messages', 'labels']
+        # revision
+        revisions_data = data["revisions"]
+        revisions = []
+        for revision_id in revisions_data.keys():
+            revision = Revision(revisions_data[revision_id])
+            revisions.append(revision.parse())
 
-    status = ''
-
-    revisions: [Revision] = []
-    reviewers: [str] = []
-    messages: [Message] = []
-    labels: [Label] = []
-
-    def __init__(self, data):
-        self.change_number = data['_number']
-
-        self.author_id = data['owner']['_account_id']
-        self.subject = data['subject'].replace('\'', '')
-        if 'topic' in data.keys():
-            self.topic = data['topic'].replace('\'', '')
-        self.created = datetime.fromisoformat(re.sub(r"\.[0-9]+", "", data['created']))
-
-        if "deletions" in data.keys():
-            self.deletions = data['deletions']
-        if "insertions" in data.keys():
-            self.insertions = data['insertions']
-
-        self.updated = datetime.fromisoformat(re.sub(r"\.[0-9]+", "", data['updated']))
-        self.project = data['project']
-        self.status = data['status']
-
-        revisions = data["revisions"]
-        self.revisions = []
-        for revision_id in revisions.keys():
-            self.revisions.append(Revision(revision_id, revisions[revision_id]))
-
+        # reviewers
+        reviewers = []
         if "reviewers" in data.keys():
             if "REVIEWER" in data["reviewers"].keys():
                 for account in data["reviewers"]["REVIEWER"]:
-                    self.reviewers.append(account["_account_id"])
+                    reviewers.append(account["_account_id"])
+        result["reviewers"] = reviewers
 
-        messages = data["messages"]
-        self.messages = [Message(messageBody) for messageBody in messages]
-        labels = data["labels"]
-        for kind in labels.keys():
-            for label in labels[kind]["all"]:
-                self.labels.append(Label(kind, label))
+        # messages
+        messages_data = data["messages"]
+        messages = [Message(message).parse() for message in messages_data]
+        result["messages"] = messages
+
+        # labels
+        labels_data = data["labels"]
+        labels = []
+        for kind in labels_data.keys():
+            for label_data in labels_data[kind]["all"]:
+                label = Label(kind, label_data)
+                # 0 values aren't important
+                if label.value() != 0:
+                    labels.append(label.parse())
+        result["labels"] = labels
+        return result
 
     @staticmethod
     def is_mergeable(data):

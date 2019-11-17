@@ -1,6 +1,5 @@
-from datetime import datetime
-from Objects.File import *
-import re
+from Objects.File import File
+from Objects.Parser import Parser
 
 """
 "revisions": {
@@ -35,14 +34,14 @@ import re
 """
 
 
-class Revision:
-    id = ''
-    number = ''
-    created = ''
-    files: [File] = []
+class Revision(Parser):
+    different = {'number': '_number', 'uploader': 'uploader/_account_id'}
+    same = ['created']
+    dates = ['created']
 
-    def __init__(self, id, data):
-        self.id = id
-        self.number = data['_number']
-        self.created = re.sub(".[0-9]+0000", "", data['created'])
-        self.files = [File(file_name, data["files"][file_name]) for file_name in data["files"].keys()]
+    def parse(self):
+        result = super().parse()
+        data = self.data
+
+        result['files'] = [File(data['files'][file_name], file_name, ).parse() for file_name in data['files'].keys()]
+        return result
