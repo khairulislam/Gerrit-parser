@@ -46,6 +46,8 @@ class Change(Parser):
         labels_data = data["labels"]
         labels = []
         for kind in labels_data.keys():
+            if "all" not in labels_data[kind].keys():
+                continue
             for label_data in labels_data[kind]["all"]:
                 label = Label(kind, label_data)
                 # 0 values aren't important
