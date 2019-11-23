@@ -41,7 +41,7 @@ class Revision(Parser):
 
     def parse(self):
         result = super().parse()
-        data = self.data
 
+        data = self.data
         result['files'] = [File(data['files'][file_name], file_name, ).parse() for file_name in data['files'].keys()]
         return result

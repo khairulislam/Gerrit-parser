@@ -32,7 +32,6 @@ class Label(Parser):
 
     def parse(self):
         result = super().parse()
-        result['date'] = self.fix_date(result['date'])
         result['kind'] = self.kind
         result['value'] = self.value()
         return result

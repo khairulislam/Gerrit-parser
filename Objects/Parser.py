@@ -27,13 +27,13 @@ class Parser:
             if different_result is not None:
                 result[different_key] = different_result
             else:
-                print("{0} not in path".format(different_key))
+                # print("{0} not in path".format(different_key))
                 result[different_key] = ''
         
         # remove microseconds from dates
         for date_key in self.dates:
             if date_key in result.keys():
-                result[date_key] = re.sub(r"\.[0-9]+", "", result[date_key])
+                result[date_key] = self.fix_date(result[date_key])
 
         return result
 
@@ -45,7 +45,7 @@ class Parser:
                 if path in data.keys():
                     data = data[path]
                 else:
-                    print("Couldn't find {0}".format(path))
+                    # print("Couldn't find {0} in {1}".format(path, data))
                     return None
             else:
                 print("Not dict type")

@@ -19,9 +19,6 @@ class Change(Parser):
         data = self.data
         # this handles nested and same
         result = super().parse()
-        
-        result['created'] = self.fix_date(result['created'])
-        result['updated'] = self.fix_date(result['updated'])
 
         # following are for object type values ['revisions', 'reviewers', 'messages', 'labels']
         # revision
@@ -30,6 +27,7 @@ class Change(Parser):
         for revision_id in revisions_data.keys():
             revision = Revision(revisions_data[revision_id])
             revisions.append(revision.parse())
+        result['revisions'] = revisions
 
         # reviewers
         reviewers = []

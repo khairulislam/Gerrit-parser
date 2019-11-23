@@ -1,0 +1,179 @@
+{
+    "org.eclipse.egit.ui/src/org/eclipse/egit/ui/internal/actions/RepositoryAction.java": [
+        {
+            "author": {
+                "_account_id": 74,
+                "name": "Benjamin Muskalla",
+                "email": "benjamin.muskalla@tasktop.com",
+                "username": "bmuskalla",
+                "avatars": [
+                    {
+                        "url": "https://www.gravatar.com/avatar/ab0f1e1c60adc5b81046040b66acce03.jpg?d=identicon&r=pg&s=26",
+                        "height": 26
+                    },
+                    {
+                        "url": "https://www.gravatar.com/avatar/ab0f1e1c60adc5b81046040b66acce03.jpg?d=identicon&r=pg&s=32",
+                        "height": 32
+                    },
+                    {
+                        "url": "https://www.gravatar.com/avatar/ab0f1e1c60adc5b81046040b66acce03.jpg?d=identicon&r=pg&s=100",
+                        "height": 100
+                    }
+                ]
+            },
+            "patch_set": 1,
+            "id": "AAALxn%2F%2F%2F2I%3D",
+            "line": 70,
+            "updated": "2010-08-04 18:18:24.000000000",
+            "message": "Why do we need a snapshot of the world? Isn't it possible to just use getCurrentState() to get the selection?",
+            "unresolved": false
+        },
+        {
+            "author": {
+                "_account_id": 46,
+                "name": "Mathias Kinzler",
+                "email": "mathias.kinzler@sap.com",
+                "username": "mkinzler",
+                "avatars": [
+                    {
+                        "url": "https://www.gravatar.com/avatar/c54d150d2e7f138aebf631c96b7fb18f.jpg?d=identicon&r=pg&s=26",
+                        "height": 26
+                    },
+                    {
+                        "url": "https://www.gravatar.com/avatar/c54d150d2e7f138aebf631c96b7fb18f.jpg?d=identicon&r=pg&s=32",
+                        "height": 32
+                    },
+                    {
+                        "url": "https://www.gravatar.com/avatar/c54d150d2e7f138aebf631c96b7fb18f.jpg?d=identicon&r=pg&s=100",
+                        "height": 100
+                    }
+                ]
+            },
+            "patch_set": 1,
+            "id": "AAALx3%2F%2F%2F%2F8%3D",
+            "line": 70,
+            "in_reply_to": "AAALxn%2F%2F%2F2I%3D",
+            "updated": "2010-08-05 07:37:18.000000000",
+            "message": "Done",
+            "unresolved": false
+        }
+    ],
+    "org.eclipse.egit.ui/src/org/eclipse/egit/ui/internal/actions/RepositoryActionHandler.java": [
+        {
+            "author": {
+                "_account_id": 74,
+                "name": "Benjamin Muskalla",
+                "email": "benjamin.muskalla@tasktop.com",
+                "username": "bmuskalla",
+                "avatars": [
+                    {
+                        "url": "https://www.gravatar.com/avatar/ab0f1e1c60adc5b81046040b66acce03.jpg?d=identicon&r=pg&s=26",
+                        "height": 26
+                    },
+                    {
+                        "url": "https://www.gravatar.com/avatar/ab0f1e1c60adc5b81046040b66acce03.jpg?d=identicon&r=pg&s=32",
+                        "height": 32
+                    },
+                    {
+                        "url": "https://www.gravatar.com/avatar/ab0f1e1c60adc5b81046040b66acce03.jpg?d=identicon&r=pg&s=100",
+                        "height": 100
+                    }
+                ]
+            },
+            "patch_set": 1,
+            "id": "AAALxn%2F%2F%2F2E%3D",
+            "line": 191,
+            "updated": "2010-08-04 18:18:24.000000000",
+            "message": "Why do we need a snapshot of the world? Isn't it possible to just use getCurrentState() to get the selection?",
+            "unresolved": false
+        },
+        {
+            "author": {
+                "_account_id": 46,
+                "name": "Mathias Kinzler",
+                "email": "mathias.kinzler@sap.com",
+                "username": "mkinzler",
+                "avatars": [
+                    {
+                        "url": "https://www.gravatar.com/avatar/c54d150d2e7f138aebf631c96b7fb18f.jpg?d=identicon&r=pg&s=26",
+                        "height": 26
+                    },
+                    {
+                        "url": "https://www.gravatar.com/avatar/c54d150d2e7f138aebf631c96b7fb18f.jpg?d=identicon&r=pg&s=32",
+                        "height": 32
+                    },
+                    {
+                        "url": "https://www.gravatar.com/avatar/c54d150d2e7f138aebf631c96b7fb18f.jpg?d=identicon&r=pg&s=100",
+                        "height": 100
+                    }
+                ]
+            },
+            "patch_set": 1,
+            "id": "AAALx3%2F%2F%2F%2F4%3D",
+            "line": 191,
+            "in_reply_to": "AAALxn%2F%2F%2F2E%3D",
+            "updated": "2010-08-05 07:37:18.000000000",
+            "message": "Done",
+            "unresolved": false
+        }
+    ],
+    "org.eclipse.egit.ui/src/org/eclipse/egit/ui/uitext.properties": [
+        {
+            "author": {
+                "_account_id": 74,
+                "name": "Benjamin Muskalla",
+                "email": "benjamin.muskalla@tasktop.com",
+                "username": "bmuskalla",
+                "avatars": [
+                    {
+                        "url": "https://www.gravatar.com/avatar/ab0f1e1c60adc5b81046040b66acce03.jpg?d=identicon&r=pg&s=26",
+                        "height": 26
+                    },
+                    {
+                        "url": "https://www.gravatar.com/avatar/ab0f1e1c60adc5b81046040b66acce03.jpg?d=identicon&r=pg&s=32",
+                        "height": 32
+                    },
+                    {
+                        "url": "https://www.gravatar.com/avatar/ab0f1e1c60adc5b81046040b66acce03.jpg?d=identicon&r=pg&s=100",
+                        "height": 100
+                    }
+                ]
+            },
+            "patch_set": 1,
+            "id": "AAALxn%2F%2F%2F2A%3D",
+            "line": 781,
+            "updated": "2010-08-04 18:18:24.000000000",
+            "message": "Seems not to be used anywhere?",
+            "unresolved": false
+        },
+        {
+            "author": {
+                "_account_id": 46,
+                "name": "Mathias Kinzler",
+                "email": "mathias.kinzler@sap.com",
+                "username": "mkinzler",
+                "avatars": [
+                    {
+                        "url": "https://www.gravatar.com/avatar/c54d150d2e7f138aebf631c96b7fb18f.jpg?d=identicon&r=pg&s=26",
+                        "height": 26
+                    },
+                    {
+                        "url": "https://www.gravatar.com/avatar/c54d150d2e7f138aebf631c96b7fb18f.jpg?d=identicon&r=pg&s=32",
+                        "height": 32
+                    },
+                    {
+                        "url": "https://www.gravatar.com/avatar/c54d150d2e7f138aebf631c96b7fb18f.jpg?d=identicon&r=pg&s=100",
+                        "height": 100
+                    }
+                ]
+            },
+            "patch_set": 1,
+            "id": "AAALx3%2F%2F%2F%2F0%3D",
+            "line": 781,
+            "in_reply_to": "AAALxn%2F%2F%2F2A%3D",
+            "updated": "2010-08-05 07:37:18.000000000",
+            "message": "Done",
+            "unresolved": false
+        }
+    ]
+}

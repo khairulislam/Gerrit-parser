@@ -20,9 +20,8 @@ class Message(Parser):
 
     def parse(self):
         result = super().parse()
-        data = self.data
-        result['date'] = self.fix_date(result['date'])
 
+        data = self.data
         if 'real_author' in data.keys():
             result['author'] = data['real_author']['_account_id']
         elif 'author' in data.keys():
