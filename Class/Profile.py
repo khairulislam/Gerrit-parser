@@ -1,4 +1,4 @@
-from Objects.Parser import Parser
+from Class.Parser import Parser
 """
 {
     "registered_on": "2015-12-16 17:50:21.000000000",

@@ -1,4 +1,4 @@
-from Objects.Parser import Parser
+from Class.Parser import Parser
 
 """
 {

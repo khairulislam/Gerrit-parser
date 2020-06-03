@@ -1,4 +1,4 @@
-from Objects import Parser
+from Class import Parser
 
 
 class ChangeSummary(Parser):

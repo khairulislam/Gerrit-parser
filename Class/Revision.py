@@ -1,5 +1,5 @@
-from Objects.File import File
-from Objects.Parser import Parser
+from Class.File import File
+from Class.Parser import Parser
 
 """
 "revisions": {

@@ -1,8 +1,8 @@
 from datetime import datetime
-from Objects.Label import Label
-from Objects.Message import Message
-from Objects.Revision import Revision
-from Objects.Parser import Parser
+from Class.Label import Label
+from Class.Message import Message
+from Class.Revision import Revision
+from Class.Parser import Parser
 import re
 
 
